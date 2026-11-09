@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Personal Login Helperが利用するGoogleユーザーデータ、保存場所、アクセス解除について説明します。">
+  <title>Personal Login Helper｜プライバシーポリシー</title>
+  <style>
+    :root { color-scheme: light; color: #17283c; background: #f4f7fa; font-family: system-ui, sans-serif; }
+    * { box-sizing: border-box; }
+    body { max-width: 44rem; margin: 0 auto; padding: 1.5rem 1.1rem 3rem; line-height: 1.75; overflow-wrap: anywhere; }
+    header { padding-block: .85rem 1rem; border-bottom: 1px solid #c4cfdb; }
+    h1 { font-size: clamp(1.5rem, 5vw, 2.15rem); line-height: 1.25; margin: .4rem 0; }
+    h2 { font-size: 1.25rem; line-height: 1.4; margin: 1.55rem 0 .45rem; }
+    p { margin: .45rem 0 .9rem; }
+    a { color: #174f7e; text-underline-offset: .2em; }
+    a:focus-visible { outline: 2px solid #174f7e; outline-offset: 3px; }
+    .draft { color: #526272; font-size: .92rem; }
+    footer { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #c4cfdb; }
+  </style>
+</head>
+<body>
+  <header>
+    <nav aria-label="ページ案内"><a href="index.html">Personal Login Helper アプリ概要</a></nav>
+    <h1>プライバシーポリシー</h1>
+    <p>Personal Login Helperは、運営者本人1人が自分のWindows PCで使う個人用アプリです。</p>
+  </header>
+  <main>
+    <section aria-labelledby="access">
+      <h2 id="access">Googleから取得するデータと用途</h2>
+      <p>Gmail APIの <code>gmail.readonly</code> だけを使います。この権限はメールボックス全体の読み取りを許可します。実際の処理は、同意先が設定した本人のアカウントかの照合と、本人が利用するサービスの正規ログインに対応するワンタイムコードの取得に限ります。</p>
+      <p>本人が利用するサービスの、ログイン確認用の特定の通知メール（決まった送信元・件名のもの）だけを読み、コードをそのサービスの公式ログイン画面に入力します。メールIDと受信時刻で送信操作の前後を照合し、今回の候補が1件と確定した場合だけ本文を読みます。本文のコードと有効期限を検証します。Gmail上の送信、削除、ラベル変更は行いません。</p>
+    </section>
+    <section aria-labelledby="storage">
+      <h2 id="storage">ローカルでの保存と保護</h2>
+      <p>Gmailのメール本文、コード、候補メールID、アクセストークンは実行中のメモリで扱い、ファイル、実行ログ、画面記録には保存しません。Gmail OAuthのリフレッシュトークンとクライアントシークレットは、現在のWindowsユーザーの資格情報マネージャーに保管します。ログイン先サービスのID・パスワードも、同じ資格情報マネージャーの別の項目に保管します。初期設定で読み込む認証用JSONは本人のPCだけに一時保存し、設定の確認後に本人が削除します。</p>
+      <p>照合用の本人Gmailアドレスと秘密値を含まないOAuth設定、専用ブラウザのセッション、実行結果は、Google Driveの同期対象外にある本人のPCの専用フォルダに置きます。実行結果には状態、時刻、件数、確認できた資料の情報などを記録しますが、Gmailのメール本文やコード、パスワード、トークンは含めません。</p>
+    </section>
+    <section aria-labelledby="sharing">
+      <h2 id="sharing">提供と共有</h2>
+      <p>メール認証で取得したコードは、本人のログインのためにそのサービスの公式ログイン画面だけに送ります。Gmail APIから取得したメール本文、コード、メールID、本人アドレス、OAuth資格情報は、Google Drive、公開サイト、共有フォルダに複製しません。本人が別途保存を許可された資料はGmailデータとは分け、本人が指定した保存先だけで扱います。</p>
+      <p>Google APIから受け取る情報の取り扱いには、限定使用（Limited Use）要件を含む Google API Services User Data Policy が適用されます。<br><a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a></p>
+    </section>
+    <section aria-labelledby="remove">
+      <h2 id="remove">アクセス解除と削除</h2>
+      <p>運営者はGoogleアカウントの「サードパーティとの接続」からアプリへのアクセスを取り消せます。PCに残る資格情報は、初期設定手順に記載されたアプリ用の項目をWindowsの資格情報マネージャーから削除します。アプリを終了したうえで、専用フォルダにある設定・セッション・実行結果も本人が削除できます。<br><a href="https://myaccount.google.com/connections">Googleアカウントの接続管理</a></p>
+    </section>
+    <section aria-labelledby="website">
+      <h2 id="website">この説明サイト</h2>
+      <p>この静的サイトに入力フォーム、広告、アクセス解析のスクリプトはありません。Gmailの同意やアクセスはこのサイトでは行いません。公開ホスティング時の通信には、ホスティング事業者のプライバシー文書が適用されます。<br><a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">GitHubのプライバシー文書</a></p>
+    </section>
+  </main>
+  <footer>
+    <h2 id="contact">運営者</h2>
+    <p>運営者の確認には GitHub プロフィールをご覧ください。<br><a href="https://github.com/nryosuke5315-png">GitHub プロフィール</a></p>
+  </footer>
+</body>
+</html>

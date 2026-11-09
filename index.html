@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Personal Login Helperは運営者本人1人がWindows PCで使用するログイン補助ツールです。">
+  <title>Personal Login Helper｜アプリ概要</title>
+  <style>
+    :root { color-scheme: light; color: #17283c; background: #f4f7fa; font-family: system-ui, sans-serif; }
+    * { box-sizing: border-box; }
+    body { max-width: 44rem; margin: 0 auto; padding: 1.5rem 1.1rem 3rem; line-height: 1.75; }
+    header { padding-block: 1.4rem 1rem; border-bottom: 1px solid #c4cfdb; }
+    h1 { font-size: 2.15rem; line-height: 1.2; margin: .4rem 0; }
+    h2 { font-size: 1.25rem; line-height: 1.4; margin: 1.55rem 0 .45rem; }
+    p { margin: .45rem 0 .9rem; }
+    nav ul { display: flex; flex-wrap: wrap; gap: .35rem 1.2rem; padding: 0; margin: 1rem 0 0; list-style: none; }
+    a { color: #174f7e; text-underline-offset: .2em; }
+    a:focus-visible { outline: 2px solid #174f7e; outline-offset: 3px; }
+    .draft { color: #526272; font-size: .92rem; }
+    footer { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #c4cfdb; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Personal Login Helper</h1>
+    <p>運営者本人が、自分のWindows PCで利用するサービスへのログインを補助する個人用アプリです。</p>
+    <nav aria-label="ページ案内">
+      <ul>
+        <li><a href="privacy.html">プライバシーポリシー</a></li>
+        <li><a href="#terms">利用条件</a></li>
+        <li><a href="#contact">運営者</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section aria-labelledby="about">
+      <h2 id="about">アプリの用途</h2>
+      <p>本人が利用するサービスへ、本人の認証済みセッションまたは通常のID・パスワード認証でアクセスします。メール認証が必要な場合だけ、本人が許可したGmailの読み取り専用アクセスを使います。本人が利用するサービスの、ログイン確認用の特定の通知メール（決まった送信元・件名のもの）だけを読み、コードをそのサービスの公式ログイン画面に入力します。</p>
+      <p>認証後は、本人がアクセスを許可された資料やお知らせなどを確認します。利用対象は運営者本人1人です。このサイトはアプリの説明とプライバシーポリシーを掲載する静的サイトです。</p>
+    </section>
+    <section aria-labelledby="terms">
+      <h2 id="terms">利用条件</h2>
+      <p>本人のサービスアカウントとGoogleアカウントを、それぞれの提供者が適用する条件に従って利用します。アクセス制限や追加認証などで正規の手順を続けられない場合、該当する処理を止めます。</p>
+      <p>運営者が個人用に管理するアプリであり、連携先サービスやGoogleが提供する公式アプリではありません。Googleアカウントへの接続解除とローカルデータの管理方法はプライバシーポリシーに記載しています。</p>
+    </section>
+  </main>
+  <footer>
+    <h2 id="contact">運営者</h2>
+    <p>運営者の確認には GitHub プロフィールをご覧ください。<br><a href="https://github.com/nryosuke5315-png">GitHub プロフィール</a></p>
+  </footer>
+</body>
+</html>
